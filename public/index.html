@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html ng-app="contactManager">
+   <head>
+      <title>contatti</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.css" integrity="sha256-Qw4NsTVY1Eabw6ioAdU5srjB29bjSepGN9THJNVWqBs=" crossorigin="anonymous" />
+      <base href="/">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      
+      <link rel="icon" href="icon.png" type="image/x-icon"/>
+      <style type="text/css">
+         .card {
+         margin-top : 1.5rem;
+         box-shadow: 3px 3px 6px 6px #f2f2f2;
+         border: none;
+         font-family: 'Sulphur Point', sans-serif;
+         }
+         .mr-3 {
+         border-radius: 80px;
+         }
+         .card-buttons {
+         padding-top: 1.0rem;
+         }
+         .card-body {
+         padding-bottom: 0.5rem;
+         }
+         .put-on {
+         color: #F3BF42;
+         }
+         .media > .media-body > .contact-content {
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;
+         width: 10.0rem;
+         display: block;
+         }
+         .contact-name {
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;
+         width: 10.0rem;
+         display: block;
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="/">contatti</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="/"><i class="fa fa-address-book"></i> My contacts</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="contact/add"><i class="fa fa-plus"></i> New contact  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-sign-out-alt"></i> Sign out </a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <div ng-view></div>
+      </div>
+      <!-- <toaster-container></toaster-container> -->
+      <section style="height: 100px; background: #22a7f0; margin-top: 5.0rem; ">
+         <div class="container">
+         </div>
+      </section>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js" integrity="sha256-biQnzwpmTVb5ZZDRDiU8iwbj7ZPTH9SZSxn5gewyFA0=" crossorigin="anonymous"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.js" integrity="sha256-G54+CuyoJiotN1DnHcxp0rKdDfHLSARmjgXmHjWCvDA=" crossorigin="anonymous"></script>
+      <script src="app.js"></script>
+      <script src="services/RepositoryService.js"></script>
+      <script src="controllers/HomeController.js"></script>
+      <script src="controllers/ContactAddController.js"></script>
+      <script src="controllers/ContactDetailsController.js"></script>
+      <script src="controllers/ContactEditController.js"></script>
+      <script src="controllers/ContactRemoveController.js"></script>
+   </body>
+</html>
