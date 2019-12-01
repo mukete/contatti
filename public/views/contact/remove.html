@@ -1,0 +1,27 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1>Are you sure to delete this contact ?</h1>
+         <div class="card">
+            <div class="card-body">
+               <div class="media">
+                  <img src="http://placehold.it/150x150/4376DC" class="mr-3" alt="{{ vm.model.contactName }}" style="border-radius: 75px;" >
+                  <div class="media-body">
+                     <h5 class="mt-0 ">{{ vm.model.contactName }}</h5>
+                     <span >{{ vm.model.contactPhone }}</span> <br/>
+                     <span >{{ vm.model.contactEmail }} </span>
+                  </div>
+               </div>
+               <div class="card-buttons">
+                  <a ng-click="vm.remove(vm.model._id)" class="btn btn-danger">Confirm delete</a>
+                  &nbsp;
+                  <a ng-click="vm.cancel()"class="btn btn-light">Back</a>
+                  &nbsp;
+                  <a class="btn btn-default float-right" ng-if="!!contact.contactFavorite"> <i class="fa fa-star put-on"></i> </a>
+                  <a class="btn btn-default float-right" ng-if="!!!contact.contactFavorite"> <i class="fa fa-star"></i> </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Create new contact</h1>
+
+                    <form name="form" novalidate ng-submit="vm.save()">
+                        <div class="form-horizontal">
+
+                           
+                            <div class="form-group">
+                                <label for="contactPhoto" class="control-label col-md-2">Photo</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="contactPhoto" class="form-control" ng-model="vm.model.contactPhoto" />
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{ 'has-error': form.contactName.$invalid }">
+                                <label for="contactName" class="control-label col-md-2">Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="contactName" class="form-control" required ng-model="vm.model.contactName" />
+                                    <span class="text-danger help-block" ng-show="form.contactName.$error.required">(*) Required</span>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="form-group" ng-class="{ 'has-error': form.contactPhone.$invalid }">
+                                <label for="contactPhone" class="control-label col-md-2">Phone</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="contactPhone" class="form-control" required ng-model="vm.model.contactPhone" />
+                                    <span class="text-danger help-block" ng-show="form.contactPhone.$error.required">(*) Required</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{ 'has-error': form.contactEmail.$invalid }">
+                                <label for="contactEmail" class="control-label col-md-2">Email</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="contactEmail" class="form-control" required ng-model="vm.model.contactEmail" />
+                                    <span class="text-danger help-block" ng-show="form.contactEmail.$error.required">(*) Required</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Save contact" ng-disabled="!form.$valid" class="btn btn-primary" />
+                                    &nbsp;&nbsp;
+                                    <a ng-click="vm.cancel()" class="btn btn-warning">Go Back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

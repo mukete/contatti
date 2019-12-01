@@ -1,0 +1,46 @@
+<h1>My contacts</h1>
+<!-- <p>
+   <a ng-click="vm.add()">New contact <i class="fa fa-plus"></i> </a>
+   </p> -->
+<div class="container ">
+   <div class="row ">
+      <div class="col-md-12">
+         <form>
+            <div class="form-row align-items-center">
+               <label for="searchContact">Start typing contact name to search ...</label>
+               <input type="text" name="contactName" class="form-control" placeholder="Contact name" ng-model="vm.search.contactName" ng-change="vm.search()">
+               <small id="passwordHelpBlock" class="form-text text-muted">
+               Start typing contact name to search.
+               </small>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+      <div class="col-md-4 col-sm-12" ng-repeat="contact in vm.contacts">
+         <div class="card">
+            <div class="card-body">
+               <div class="media">
+                  <img src="http://placehold.it/80x80/4376DC" class="mr-3" alt="{{ contact.contactName }}" >
+                  <div class="media-body">
+                     <h5 class="mt-0 contact-name">{{ contact.contactName }}</h5>
+                     <span class="contact-content">{{ contact.contactPhone }}</span> <br/>
+                     <span class="contact-content">{{ contact.contactEmail }} </span>
+                  </div>
+               </div>
+               <div class="card-buttons">
+                  <a ng-click="vm.details(contact._id)" class="btn  btn-sm btn-outline-success">View</a>
+                  &nbsp;
+                  <a ng-click="vm.remove(contact._id)" class="btn  btn-sm btn-outline-danger">Delete</a>
+                  &nbsp;
+                  <a class="btn btn-default float-right" ng-if="!!contact.contactFavorite"> <i class="fa fa-star put-on"></i> </a>
+
+                  <a class="btn btn-default float-right" ng-if="!!!contact.contactFavorite"> <i class="fa fa-star"></i> </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
